@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 21:38:42 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/01 19:35:07 by rarahhal         ###   ########.fr       */
+/*   Created: 2021/12/01 19:30:50 by rarahhal          #+#    #+#             */
+/*   Updated: 2021/12/01 19:34:18 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int ft_printf(const char *, ...)
-{
-	
-}
+# include <unistd.h>
+# include <stdio.h>
+
+int ft_printf(const char *, ...);
+
+
+
+
+#endif
