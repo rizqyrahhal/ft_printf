@@ -2,9 +2,9 @@
 
 int	main()
 {
-	char name = 'R';
-	printf("%d\n", ft_printf("this is test :\n My name is %c\n", name));
-
+	char name = '8';
+	ft_printf("this is test :\n My name is %c\n", name);
+	// printf("%d\n", ft_printf("this is test :\n My name is %c\n", name));
 	return 0;
 }
 
