@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 21:38:42 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/02 22:34:17 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/03 06:21:59 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -25,8 +25,8 @@ int	ft_format(va_list list, const char format)
 	lenght_prints = 0;
 	if (format == 'c')
 		lenght_prints += ft_putchar(va_arg(list, int));
-	// if (str[++i] == 's')
-	// 	ft_putstr(va_arg(list, char *));
+	if (format == 's')
+		lenght_prints += ft_printstr(va_arg(list, char *));
 	if (format == '%')
 		lenght_prints +=  ft_putchar('%');
 	return (lenght_prints);

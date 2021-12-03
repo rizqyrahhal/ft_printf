@@ -2,8 +2,10 @@
 
 int	main()
 {
-	char name = '8';
+	char name = 'R';
 	ft_printf("this is test :\n My name is %c\n", name);
+	ft_printf("test 2 pour print str[] : \n My name is %s\n", "mohhammed");
+	ft_printf("test 3 pour %% \n");
 	// printf("%d\n", ft_printf("this is test :\n My name is %c\n", name));
 	return 0;
 }
