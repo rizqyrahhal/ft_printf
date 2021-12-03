@@ -3,20 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 21:38:42 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/03 07:16:25 by RizQy            ###   ########.fr       */
+/*   Updated: 2021/12/03 17:41:02 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
-int	ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return (1);
-}
+#include "includes/ft_printf.h"
 
 int	ft_format(va_list list, const char format)
 {
@@ -24,11 +18,19 @@ int	ft_format(va_list list, const char format)
 	
 	lenght_prints = 0;
 	if (format == 'c')
-		lenght_prints += ft_putchar(va_arg(list, int));
+		lenght_prints += ft_print_char(va_arg(list, int));
 	if (format == 's')
-		lenght_prints += ft_printstr(va_arg(list, char *));
+		lenght_prints += ft_print_str(va_arg(list, char *));
+	// if (format == 'p')
+	// 	lenght_prints += ft_print_ptr(va_arg(list, void *));
+	if (format == 'd' || format == 'i')
+		lenght_prints += ft_print_nbr(va_arg(list, int));
+	if (format == 'u')
+		lenght_prints += ft_print_unsigned(va_arg(list, unsigned int));
+	// if (format == 'x' || format == 'X')
+	// 	lenght_prints += ft_print_hexa(va_arg(list, unsigned int), format);
 	if (format == '%')
-		lenght_prints +=  ft_putchar('%');
+		lenght_prints +=  ft_print_char('%');
 	return (lenght_prints);
 }
 
@@ -50,7 +52,7 @@ int ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			lenght_prints += ft_putchar(str[i]);
+			lenght_prints += ft_print_char(str[i]);
 		i++;
 	}
 	

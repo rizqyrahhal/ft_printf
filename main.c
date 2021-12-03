@@ -6,7 +6,16 @@ int	main()
 	ft_printf("this is test :\n My name is %c\n", name);
 	ft_printf("test 2 pour print str[] : \n My name is %s\n", "mohhammed");
 	ft_printf("test 3 pour %% \n");
-	// printf("%d\n", ft_printf("this is test :\n My name is %c\n", name));
+	ft_printf("TEST 4 pout number : %d\n", -88875);
+	ft_printf("TEST 5 pout integer : %i\n", 579875);
+	ft_printf("TEST 6 pour unsigned : %u\n", -544521);
+	// ft_printf("this test pour le reture de My ft_printf :\n%d\n", ft_printf("this is test :\n My name is %c\n", name));
+	ft_printf("------------------------\n");
+	char *p;
+	p = "kahf";
+	printf("%X\n", 18);
+
+
 	return 0;
 }
 

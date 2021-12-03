@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+         #
+#    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 19:37:32 by rarahhal          #+#    #+#              #
-#    Updated: 2021/12/03 07:21:20 by RizQy            ###   ########.fr        #
+#    Updated: 2021/12/03 17:42:29 by rarahhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,15 +14,21 @@ NAME = libftprintf.a
 FLAGS = -Wall -Werror -Wextra
 CC = cc
 
-SRCS = sources/ft_printf.c \
-		sources/ft_printstr.c \
+SRCS = ft_printf.c \
+		sources/ft_print_char.c \
+		sources/ft_print_str.c \
+		sources/ft_print_ptr.c \
+		sources/ft_print_nbr.c \
+		sources/ft_print_unsigned.c \
+		sources/ft_print_hexa.c \
 		
 		
+		
 	   
 	   
 	   
 	   
-# OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
@@ -35,7 +41,7 @@ clean:
 	rm -f *.o
 
 fclean: clean
-	rm -f $(NAME) test
+	rm -f $(NAME) test teat_fg
 
 re: fclean
 	make all
