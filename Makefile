@@ -6,7 +6,7 @@
 #    By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 19:37:32 by rarahhal          #+#    #+#              #
-#    Updated: 2021/12/03 07:15:46 by RizQy            ###   ########.fr        #
+#    Updated: 2021/12/03 07:21:20 by RizQy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = sources/ft_printf.c \
 	   
 	   
 	   
-OBJS = $(SRCS:.c=.o)
+# OBJS = $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
