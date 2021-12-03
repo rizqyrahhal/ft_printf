@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 21:38:42 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/03 19:31:40 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/03 20:31:55 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	ft_format(va_list list, const char format)
 		lenght_prints += ft_print_nbr(va_arg(list, int));
 	if (format == 'u')
 		lenght_prints += ft_print_unsigned(va_arg(list, unsigned int));
-	// if (format == 'x' || format == 'X')
-	// 	lenght_prints += ft_print_hexa(va_arg(list, unsigned int), format);
+	if (format == 'x' || format == 'X')
+		lenght_prints += ft_print_hexa(va_arg(list, unsigned int), format);
 	if (format == '%')
 		lenght_prints +=  ft_print_char('%');
 	return (lenght_prints);
