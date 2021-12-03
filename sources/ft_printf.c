@@ -6,11 +6,11 @@
 /*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 21:38:42 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/03 06:21:59 by RizQy            ###   ########.fr       */
+/*   Updated: 2021/12/03 07:16:25 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_putchar(char c)
 {
