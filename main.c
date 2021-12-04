@@ -13,7 +13,7 @@ int	main()
 	ft_printf("------------------------\n");
 	char *p;
 	p = "kahf";
-	ft_printf("%X\n", 58);
+	ft_printf("%x\n", 3125864);
 
 
 	return 0;

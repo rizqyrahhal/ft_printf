@@ -6,7 +6,7 @@
 #    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 19:37:32 by rarahhal          #+#    #+#              #
-#    Updated: 2021/12/03 22:34:35 by rarahhal         ###   ########.fr        #
+#    Updated: 2021/12/04 12:53:22 by rarahhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,4 +56,3 @@ test:
 # 	rm -rf $(OBJS)
 
 .PHONY: all clean fclean re test
-https://www.geeksforgeeks.org/program-decimal-hexadecimal-conversion/
