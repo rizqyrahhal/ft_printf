@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 15:44:57 by rarahhal          #+#    #+#             */
+/*   Updated: 2021/12/04 15:47:27 by rarahhal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 long	ft_nb_len(long nb)
@@ -48,11 +60,10 @@ char	*ft_itoa(int n)
 	return (ft_write(str, nb, len));
 }
 
-
 int	ft_print_nbr(int nb)
 {
-	int	lenght_prints;
-	char *num;
+	int		lenght_prints;
+	char	*num;
 
 	num = ft_itoa(nb);
 	lenght_prints = ft_print_str(num);

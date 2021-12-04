@@ -11,9 +11,8 @@ int	main()
 	ft_printf("TEST 6 pour unsigned : %u\n", -544521);
 	// ft_printf("this test pour le reture de My ft_printf :\n%d\n", ft_printf("this is test :\n My name is %c\n", name));
 	ft_printf("------------------------\n");
-	char *p;
-	p = "kahf";
-	ft_printf("%x\n", 3125864);
+	// ft_printf("%X\n", 15);
+	ft_printf("\n%d\n", ft_printf("%x", 3125864));
 
 
 	return 0;

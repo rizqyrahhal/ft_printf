@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 15:45:17 by rarahhal          #+#    #+#             */
+/*   Updated: 2021/12/04 15:48:55 by rarahhal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 int	ft_len_nb(unsigned int nb)
@@ -15,7 +27,6 @@ int	ft_len_nb(unsigned int nb)
 
 char	*ft_writee(char *str, unsigned int nb, unsigned int len)
 {
-	
 	if (nb == 0)
 		str[0] = '0';
 	str[len--] = '\0';
@@ -31,7 +42,7 @@ char	*ft_writee(char *str, unsigned int nb, unsigned int len)
 char	*ft_utoa(unsigned int nb)
 {
 	unsigned int	len;
-	char	*str;
+	char			*str;
 
 	len = ft_len_nb(nb);
 	str = malloc(sizeof(char) * len + 1);
@@ -40,11 +51,10 @@ char	*ft_utoa(unsigned int nb)
 	return (ft_writee(str, nb, len));
 }
 
-
 int	ft_print_unsigned(unsigned int nb)
 {
-	int	lenght_prints;
-	char *num;
+	int		lenght_prints;
+	char	*num;
 
 	num = ft_utoa(nb);
 	lenght_prints = ft_print_str(num);
