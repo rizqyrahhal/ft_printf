@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 19:30:50 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/04 15:53:14 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:45:40 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <string.h>
 
 int	ft_printf(const char *str, ...);
 int	ft_print_char(char c);

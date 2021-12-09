@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:44:39 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/04 18:45:57 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/09 13:24:00 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,23 @@ void	ft_conviret_to_hexa(unsigned int num, const char format)
 {
 	int i = 0;
 	int tmp = 0;
+	float ba9i;
+	float nit;
 	char stock[] = "0123456789abcdef";
 	char STOCK[] = "0123456789ABCDEF";
 	
 	while (num != 0)
 	{
-		tmp = num % 16;
-		i = (tmp / 100) % 16;
+		tmp = num / 16;
+		ba9i = (float) num / 16;
+		nit = ba9i - tmp;
+		i = nit * 16;
+			// printf("|%f|\n", ba9i);
 		if (format == 'x')
 			ft_print_char(stock[i]);
 		else
 			ft_print_char(STOCK[i]);
-		num = num / 16;
+		num = tmp;
 	}
 }
 
@@ -50,7 +55,7 @@ int	ft_print_hexa(unsigned int num, const char format)
 	// }
 	if (num >= 16)
 		ft_conviret_to_hexa(num , format);
-	if (num >= 0 && num < 16)
+	if (num > 0 && num < 16)
 	{
 		if (format == 'x')
 			lenght_prints += ft_print_char(stock[num]);
