@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
+#    By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 19:37:32 by rarahhal          #+#    #+#              #
-#    Updated: 2021/12/04 12:53:22 by rarahhal         ###   ########.fr        #
+#    Updated: 2021/12/11 13:41:28 by RizQy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS = 	sources/ft_printf.c \
 	   
 	   
 	   
-	   
+
 OBJS = $(SRCS:sources/.c=.o)
 
 

@@ -13,6 +13,8 @@ int	main()
 	ft_printf("------------------------\n");
 	// ft_printf("%X\n", 15);
 	ft_printf("%x\n", 3125864);
+	ft_printf("%X\n", 30);
+
 	// ft_printf("\n%d\n", ft_printf("%x", 3125864));
 
 	return 0;

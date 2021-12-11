@@ -6,7 +6,7 @@
 /*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:44:39 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/09 13:24:00 by RizQy            ###   ########.fr       */
+/*   Updated: 2021/12/11 16:11:09 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 
 void	ft_conviret_to_hexa(unsigned int num, const char format)
 {
-	int i = 0;
-	int tmp = 0;
-	float ba9i;
-	float nit;
-	char stock[] = "0123456789abcdef";
-	char STOCK[] = "0123456789ABCDEF";
-	
+	int		i;
+	int		tmp;
+	float	ba9i;
+	float	nit;
+	char	*stock;
+	char	*STOCK;
+
+	i = 0;
+	tmp = 0;
+	stock = "0123456789abcdef";
+	STOCK = "0123456789ABCDEF";
 	while (num != 0)
 	{
 		tmp = num / 16;
 		ba9i = (float) num / 16;
 		nit = ba9i - tmp;
 		i = nit * 16;
-			// printf("|%f|\n", ba9i);
 		if (format == 'x')
 			ft_print_char(stock[i]);
 		else
@@ -38,23 +41,15 @@ void	ft_conviret_to_hexa(unsigned int num, const char format)
 
 int	ft_print_hexa(unsigned int num, const char format)
 {
-	int	lenght_prints;
-	// int	i;
-	// int tmp;
-	char stock[] = "0123456789abcdef";
-	char STOCK[] = "0123456789ABCDEF";
-	
+	int		lenght_prints;
+	char	*stock;
+	char	*STOCK;
+
 	lenght_prints = 0;
-	// i = 0;
-	// tmp = 0;
-	// if (num >= 16)
-	// {
-	// 	num = num / 16;
-	// 	tmp = num % 16;
-	// 	i = (tmp / 100) % 16;
-	// }
+	stock = "0123456789abcdef";
+	STOCK = "0123456789ABCDEF";
 	if (num >= 16)
-		ft_conviret_to_hexa(num , format);
+		ft_conviret_to_hexa(num, format);
 	if (num > 0 && num < 16)
 	{
 		if (format == 'x')
@@ -62,13 +57,8 @@ int	ft_print_hexa(unsigned int num, const char format)
 		else
 			lenght_prints += ft_print_char(STOCK[num]);
 	}
-	return(lenght_prints);
+	return (lenght_prints);
 }
-
-
-
-
-
 
 // int	ft_hex_len(unsigned int num)
 // {
