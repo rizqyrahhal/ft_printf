@@ -12,8 +12,10 @@ int	main()
 	// ft_printf("this test pour le reture de My ft_printf :\n%d\n", ft_printf("this is test :\n My name is %c\n", name));
 	ft_printf("------------------------\n");
 	// ft_printf("%X\n", 15);
-	ft_printf("%x\n", 3125864);
-	ft_printf("%X\n", 30);
+	ft_printf("|%d|\n", ft_printf("%x\n", 3125864));
+	ft_printf("|%d|\n", ft_printf("%X\n", 30));
+	ft_printf("|%d|\n", ft_printf("%X\n", 0));
+
 
 	// ft_printf("\n%d\n", ft_printf("%x", 3125864));
 
