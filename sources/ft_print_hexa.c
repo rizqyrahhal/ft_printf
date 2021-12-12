@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:44:39 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/12 14:55:12 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/12 16:24:20 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,37 @@ int	ft_hexa_len(unsigned int num)
 	return (len);
 }
 
-void	ft_conviret_to_hexa(unsigned int num, const char format)
+void	ft_conviret_to_hexa(unsigned int num, const char format, char *stock, char *stak)
 {
 	int		i;
 	int		tmp;
+	int		j;
 	float	nit;
-	char	*stock;
-	char	*stak;
+	char	tab[100];
 
 	i = 0;
+	j = 0;
 	tmp = 0;
-	stock = "0123456789abcdef";
-	stak = "0123456789ABCDEF";
 	while (num != 0)
 	{
 		tmp = num / 16;
 		nit = ((float) num / 16) - tmp;
 		i = nit * 16;
 		if (format == 'x')
-			ft_print_char(stock[i]);
+			tab[j] = stock[i];
 		else
-			ft_print_char(stak[i]);
+			tab[j] = stak[i];
+		j++;
+		// if (format == 'x')
+		// 	ft_print_char(stock[i]);
+		// else
+		// 	ft_print_char(stak[i]);
 		num = tmp;
+	}
+	while (j >= 0)
+	{
+		ft_print_char(tab[j]);
+		j--;
 	}
 }
 
@@ -59,14 +68,14 @@ int	ft_print_hexa(unsigned int num, const char format)
 	lenght_prints = 0;
 	stock = "0123456789abcdef";
 	stak = "0123456789ABCDEF";
-	if (num == 0)
-		lenght_prints += ft_print_char('0');
+	// if (num == 0)
+	// 	lenght_prints += ft_print_char('0');
 	if (num >= 16)
 	{
-		ft_conviret_to_hexa(num, format);
+		ft_conviret_to_hexa(num, format, stock, stak);
 		lenght_prints += ft_hexa_len(num);
 	}	
-	if (num > 0 && num < 16)
+	if (num >= 0 && num < 16)
 	{
 		if (format == 'x')
 			lenght_prints += ft_print_char(stock[num]);
