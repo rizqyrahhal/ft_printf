@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 21:38:42 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/11 13:41:37 by RizQy            ###   ########.fr       */
+/*   Updated: 2021/12/13 21:38:44 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_format(va_list list, const char format)
 		lenght_prints += ft_print_char(va_arg(list, int));
 	if (format == 's')
 		lenght_prints += ft_print_str(va_arg(list, char *));
-	// if (format == 'p')
-	// 	lenght_prints += ft_print_ptr(va_arg(list, void *));
+	if (format == 'p')
+		lenght_prints += ft_print_ptr(va_arg(list, unsigned long long));
 	if (format == 'd' || format == 'i')
 		lenght_prints += ft_print_nbr(va_arg(list, int));
 	if (format == 'u')

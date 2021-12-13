@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:44:39 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/12 16:24:20 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/13 21:38:23 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	ft_hexa_len(unsigned int num)
 	return (len);
 }
 
-void	ft_conviret_to_hexa(unsigned int num, const char format, char *stock, char *stak)
+void	ft_conviret_to_hexa(unsigned int num,
+				const char format, char *stock, char *stak)
 {
 	int		i;
 	int		tmp;
@@ -46,17 +47,10 @@ void	ft_conviret_to_hexa(unsigned int num, const char format, char *stock, char 
 		else
 			tab[j] = stak[i];
 		j++;
-		// if (format == 'x')
-		// 	ft_print_char(stock[i]);
-		// else
-		// 	ft_print_char(stak[i]);
 		num = tmp;
 	}
-	while (j >= 0)
-	{
+	while (j-- >= 0)
 		ft_print_char(tab[j]);
-		j--;
-	}
 }
 
 int	ft_print_hexa(unsigned int num, const char format)
@@ -68,8 +62,6 @@ int	ft_print_hexa(unsigned int num, const char format)
 	lenght_prints = 0;
 	stock = "0123456789abcdef";
 	stak = "0123456789ABCDEF";
-	// if (num == 0)
-	// 	lenght_prints += ft_print_char('0');
 	if (num >= 16)
 	{
 		ft_conviret_to_hexa(num, format, stock, stak);

@@ -13,12 +13,22 @@ int	main()
 	ft_printf("------------------------\n");
 	// ft_printf("%X\n", 15);
 	ft_printf("%x\n", 3125864);
+	ft_printf("%x\n", 4500488105);
+	printf("%x\n", 4500488105);
+
 	// ft_printf("|%d|\n", ft_printf("%x\n", 3125864));
 	// ft_printf("|%d|\n", ft_printf("%X\n", 30));
 	// ft_printf("|%d|\n", ft_printf("%X\n", 0));
 
 
 	// ft_printf("\n%d\n", ft_printf("%x", 3125864));
+		char	*value = "jksf";
+		ft_printf("%p\n", value);
+		printf("%p\n", value);
+	
+
+	
+
 
 	return 0;
 }
