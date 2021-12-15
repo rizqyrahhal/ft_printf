@@ -1,22 +1,23 @@
 #include "includes/ft_printf.h"
 #include <stdio.h>
 
-# define PRINT(format, args...) FUNC(format, ##args);
+// # define PRINT(format, args...) FUNC(format, ##args);
+
 
 int	main()
 {
-	char *xx = "hakam";
-	PRINT("|%s|\n", "string")
-	PRINT("|%d|\n", 123)
-	PRINT("|%i|\n", 45)
-	PRINT("|%u|\n", -45)
-	PRINT("|%%|\n")
-	PRINT("|%c|\n", 'B')
-	PRINT("|%x|\n", 123354545)
-	PRINT("|%p|\n", xx)
+	// char *xx = "hakam";
+	// PRINT("|%s|\n", "string")
+	// PRINT("|%d|\n", 123)
+	// PRINT("|%i|\n", 45)
+	// PRINT("|%u|\n", -45)
+	// PRINT("|%%|\n")
+	// PRINT("|%c|\n", 'B')
+	// PRINT("|%x|\n", 123354545)
+	// PRINT("|%p|\n", xx)
 
-	return (0);
-	/*
+	// return (0);
+	
 	char name = 'r';
 	ft_printf("this is test :\n My name is %c\n", name);
 	ft_printf("test 2 pour print str[] : \n My name is %s\n", "mohhammed");
@@ -36,17 +37,13 @@ int	main()
 	// ft_printf("|%d|\n", ft_printf("%X\n", 0));
 
 
-	// ft_printf("\n%d\n", ft_printf("%x", 3125864));
+	ft_printf("\n%d\n", ft_printf("%x", 3125864));
 		void	*value = "jksf";
-		ft_printf("%p\n", &value);
-		printf("%p\n", &value);
-		ft_printf("%p\n", value);
-		printf("%p\n", value);*/
+		ft_printf("|%d|\n", ft_printf("%p\n", &value));
+		printf("|%d|\n", printf("%p\n", &value));
+		ft_printf("|%d|\n", ft_printf("%p\n", value));
+		printf("|%d|\n", printf("%p\n", value));
 	
-
-	
-
-
 	return 0;
 }
 /*
