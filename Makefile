@@ -3,16 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+         #
+#    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 19:37:32 by rarahhal          #+#    #+#              #
-#    Updated: 2021/12/11 13:41:28 by RizQy            ###   ########.fr        #
+#    Updated: 2021/12/15 16:26:27 by rarahhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 FLAGS = -Wall -Werror -Wextra
 CC = cc
+FUNC = ft_printf
 
 SRCS = 	sources/ft_printf.c \
 		sources/ft_print_char.c \
@@ -45,8 +46,8 @@ fclean: clean
 re: fclean
 	make all
 
-test: 
-	@gcc $(FLAGS) $(SRCS) main.c -o teat_fg
+test: all
+	@gcc $(FLAGS) $(SRCS) main.c -o teat_fg -D $(FUNC)
 	@./teat_fg
 
 # test_er: $(OBJS)
