@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:45:05 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/15 18:30:41 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/16 12:31:33 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,9 @@ int	ft_print_ptr(unsigned long long ptr)
 	int	print_length;
 
 	print_length = 0;
-	write(1, "0x", 2);
-	print_length = 2;
+	print_length += write(1, "0x", 2);
 	if (ptr == 0)
-	{
-		write(1, "0", 1);
-		print_length += 1;
-	}
+		print_length += write(1, "0", 1);
 	else
 	{
 		ft_convirt(ptr);

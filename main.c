@@ -37,13 +37,21 @@ int	main()
 	// ft_printf("|%d|\n", ft_printf("%X\n", 0));
 
 
-	ft_printf("\n%d\n", ft_printf("%x", 3125864));
+	ft_printf("\n%d\n", ft_printf("%X", 3125864));
 		void	*value = "jksf";
-		ft_printf("|%d|\n", ft_printf("%p\n", &value));
-		printf("|%d|\n", printf("%p\n", &value));
-		ft_printf("|%d|\n", ft_printf("%p\n", value));
-		printf("|%d|\n", printf("%p\n", value));
-	
+		ft_printf("%p\n", &value);
+		printf("%p\n", &value);
+		ft_printf("%p\n", value);
+		printf("%p\n", value);
+		
+		printf("\n------------------------\n");
+		printf("+%d+\n", ft_printf("%p\n", value));
+		ft_printf("+%d+\n", ft_printf("%p\n", value));
+		printf("\n------------------------\n");
+
+
+
+
 	return 0;
 }
 /*
