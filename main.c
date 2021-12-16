@@ -37,6 +37,10 @@ int	main()
 	ft_printf("------------------------\n");
 	// ft_printf("%X\n", 15);
 	ft_printf("%x\n", 3125864);
+	ft_printf(">>%x<<\n", 16);
+	printf(">>%x<<\n", 16);
+
+
 	// ft_printf("%x\n", 4500488105);
 	// printf("%x\n", 4500488105);
 
@@ -44,6 +48,7 @@ int	main()
 	// ft_printf("|%d|\n", ft_printf("%X\n", 30));
 	// ft_printf("|%d|\n", ft_printf("%X\n", 0));
 
+	printf("\n------PPP****PPPPP-----------------\n");
 
 	ft_printf("\n%d\n", ft_printf("%X", 3125864));
 	void	*value = "jksf";
@@ -51,6 +56,7 @@ int	main()
 	printf("%p\n", &value);
 	ft_printf("%p\n", value);
 	printf("%p\n", value);
+	printf("\n-------PPP*****PPPP-----------------\n");
 
 	printf("\n-------testr-----------------\n");
 	// void	*testr = "-1";
@@ -75,15 +81,15 @@ int	main()
 	// printf("\n--------TTTT----------------\n");
 	
 	printf("\n-------pppppp-----------------\n");
-	char *ptr_test = NULL;
-	ft_printf("Test NULL address |%p|\n", ptr_test);
-	printf("Test NULL address |%p|\n", ptr_test);
-	printf("\n```````````````````````\n");
-	char *test2 = "Test123*";
-	char *ptr_test2 = test2;
-	int p2 = ft_printf("Test str address |%p|\n", ptr_test2);
-	int p2_true = printf("Test str address |%p|\n", ptr_test2);
-	check(p2, p2_true);
+	// char *ptr_test = NULL;
+	// ft_printf("Test NULL address |%p|\n", ptr_test);
+	// printf("Test NULL address |%p|\n", ptr_test);
+	// printf("\n```````````````````````\n");
+	// char *test2 = "Test123*";
+	// char *ptr_test2 = test2;
+	// int p2 = ft_printf("Test str address |%p|\n", ptr_test2);
+	// int p2_true = printf("Test str address |%p|\n", ptr_test2);
+	// check(p2, p2_true);
 	printf("\n```````````````````````\n");
 	printf("|%d|\n", ft_printf("This %p is even stranger\n\n", (void *)17));
 	printf("|%d|\n", printf("This %p is even stranger\n\n", (void *)17));
