@@ -1,8 +1,13 @@
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 // # define PRINT(format, args...) FUNC(format, ##args);
-
+#define RED "\e[0;31m"
+#define GRN "\e[0;32m"
+void check(int a, int b)
+{
+	a == b ? printf(GRN "OK.\e[0m (%d | Vrai: %d)\n\n", a, b) : printf(RED "KO.\e[0m(%d |Vrai: %d)\n\n", a, b);
+}
 
 int	main()
 {
@@ -25,6 +30,9 @@ int	main()
 	ft_printf("TEST 4 pour number : %d\n", -88875);
 	ft_printf("TEST 5 pour integer : %i\n", 579875);
 	ft_printf("TEST 6 pour unsigned : %u\n", -544521);
+	ft_printf("TEST 6 pour unsigned : %u\n", 0);
+
+
 	// ft_printf("this test pour le reture de My ft_printf :\n%d\n", ft_printf("this is test :\n My name is %c\n", name));
 	ft_printf("------------------------\n");
 	// ft_printf("%X\n", 15);
@@ -38,18 +46,48 @@ int	main()
 
 
 	ft_printf("\n%d\n", ft_printf("%X", 3125864));
-		void	*value = "jksf";
-		ft_printf("%p\n", &value);
-		printf("%p\n", &value);
-		ft_printf("%p\n", value);
-		printf("%p\n", value);
-		
-		printf("\n------------------------\n");
-		printf("+%d+\n", ft_printf("%p\n", value));
-		ft_printf("+%d+\n", ft_printf("%p\n", value));
-		printf("\n------------------------\n");
+	void	*value = "jksf";
+	ft_printf("%p\n", &value);
+	printf("%p\n", &value);
+	ft_printf("%p\n", value);
+	printf("%p\n", value);
 
+	printf("\n-------testr-----------------\n");
+	// void	*testr = "-1";
+	ft_printf("%p\n", "-1");
+	printf("%p\n", "-1");
 
+	printf("\n------------------------\n");
+
+	printf("\n------------------------\n");
+	printf("+%d+\n", ft_printf("%p\n", value));
+	ft_printf("+%d+\n", ft_printf("%p\n", value));
+	printf("\n------------------------\n");
+
+	// printf("\n------TTTT------------------\n");
+	// char *phrase;
+	// phrase = "phrase";
+	// int count_printf = printf("|%d|\n", ft_printf("Tests d'une longue %s (adresse : %p) de %c lignes pour \ntester les %d flags %% (ou est-ce %i?), sachant que 42 fait %x (%X)\n\n", phrase, &phrase, 'x', 9, 10, 42, 42));
+	// printf("\n************************\n");
+	// int vrai_printf = printf("|%d|\n", printf("Tests d'une longue %s (adresse : %p) de %c lignes pour \ntester les %d flags %% (ou est-ce %i?), sachant que 42 fait %x (%X)\n\n", phrase, &phrase, 'x', 9, 10, 42, 42));
+	// printf("Compteur de la vraie : %d\n", vrai_printf);
+	// printf("Compteur de la vraie : %d\n", count_printf);
+	// printf("\n--------TTTT----------------\n");
+	
+	printf("\n-------pppppp-----------------\n");
+	char *ptr_test = NULL;
+	ft_printf("Test NULL address |%p|\n", ptr_test);
+	printf("Test NULL address |%p|\n", ptr_test);
+	printf("\n```````````````````````\n");
+	char *test2 = "Test123*";
+	char *ptr_test2 = test2;
+	int p2 = ft_printf("Test str address |%p|\n", ptr_test2);
+	int p2_true = printf("Test str address |%p|\n", ptr_test2);
+	check(p2, p2_true);
+	printf("\n```````````````````````\n");
+	printf("|%d|\n", ft_printf("This %p is even stranger\n\n", (void *)17));
+	printf("|%d|\n", printf("This %p is even stranger\n\n", (void *)17));
+	printf("\n-------pppppp-----------------\n");
 
 
 	return 0;

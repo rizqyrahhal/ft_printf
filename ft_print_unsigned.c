@@ -6,15 +6,15 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:45:17 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/04 15:48:55 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:31:26 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_len_nb(unsigned int nb)
 {
-	unsigned int	len;
+	int	len;
 
 	len = 0;
 	while (nb)
@@ -56,6 +56,11 @@ int	ft_print_unsigned(unsigned int nb)
 	int		lenght_prints;
 	char	*num;
 
+	if (nb == 0)
+	{
+		ft_print_char('0');
+		return (1);
+	}
 	num = ft_utoa(nb);
 	lenght_prints = ft_print_str(num);
 	free(num);

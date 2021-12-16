@@ -6,11 +6,11 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:44:51 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/04 15:45:46 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:10:14 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_print_char(char c)
 {

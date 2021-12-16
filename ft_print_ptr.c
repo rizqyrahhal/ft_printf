@@ -6,11 +6,11 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:45:05 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/16 12:31:33 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:55:57 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_hexa_len54(unsigned int num)
 {
@@ -23,18 +23,17 @@ int	ft_hexa_len54(unsigned int num)
 		num = num / 16;
 	}
 	return (len);
+	
 }
 
 void	ft_convirt2(size_t num, char *stock)
 {
 	int		i;
-	size_t	tmp;
 	int		j;
 	char	tab[100];
-
+	
 	i = 0;
 	j = 0;
-	tmp = 0;
 	while (num > 0)
 	{
 		i = num % 16;
@@ -44,8 +43,8 @@ void	ft_convirt2(size_t num, char *stock)
 	}
 	while (j-- >= 0)
 		ft_print_char(tab[j]);
+	printf("==%s==\n", tab);
 }
-
 void	ft_convirt(size_t num)
 {
 	char	*stock;

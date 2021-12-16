@@ -6,7 +6,7 @@
 #    By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 19:37:32 by rarahhal          #+#    #+#              #
-#    Updated: 2021/12/15 18:21:23 by rarahhal         ###   ########.fr        #
+#    Updated: 2021/12/16 13:09:30 by rarahhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,16 @@ NAME = libftprintf.a
 FLAGS = -Wall -Werror -Wextra
 CC = cc
 
-SRCS = 	sources/ft_printf.c \
-		sources/ft_print_char.c \
-		sources/ft_print_str.c \
-		sources/ft_print_ptr.c \
-		sources/ft_print_nbr.c \
-		sources/ft_print_unsigned.c \
-		sources/ft_print_hexa.c \
-		
-		
-	   
-	   
-	   
+SRCS = 	ft_printf.c \
+		ft_print_char.c \
+		ft_print_str.c \
+		ft_print_ptr.c \
+		ft_print_nbr.c \
+		ft_print_unsigned.c \
+		ft_print_hexa.c \
 
-OBJS = $(SRCS:sources/.c=.o)
+
+OBJS = $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
@@ -48,11 +44,5 @@ re: fclean
 test: 
 	@gcc $(FLAGS) $(SRCS) main.c -o teat_fg 
 	@./teat_fg
-
-# test_er: $(OBJS)
-# 	gcc $(FLAGS) -c $(SRCS)
-# 	ar rc $(NAME) $(OBJS)
-# 	gcc $(NAME) main.c -o test
-# 	rm -rf $(OBJS)
 
 .PHONY: all clean fclean re test
