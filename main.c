@@ -29,8 +29,10 @@ int	main()
 	ft_printf("test 3 pour %% \n");
 	ft_printf("TEST 4 pour number : %d\n", -88875);
 	ft_printf("TEST 5 pour integer : %i\n", 579875);
-	ft_printf("TEST 6 pour unsigned : %u\n", -544521);
-	ft_printf("TEST 6 pour unsigned : %u\n", 0);
+	ft_printf("TEST 6 pour integer : %i\n", 0);
+	ft_printf("TEST 7 pour unsigned : %u\n", -544521);
+	printf("TEST 8 pour unsigned : %u\n", -544521);
+	ft_printf("TEST 9 pour unsigned : %u\n", 0);
 
 
 	// ft_printf("this test pour le reture de My ft_printf :\n%d\n", ft_printf("this is test :\n My name is %c\n", name));
@@ -95,7 +97,10 @@ int	main()
 	printf("|%d|\n", printf("This %p is even stranger\n\n", (void *)17));
 	printf("\n-------pppppp-----------------\n");
 
-
+	printf("\n-----------CHARCHARCHAR-------------\n");
+	ft_printf("\n%c\n", '4');
+	printf("\n%c\n", '4');
+	printf("\n-----------CHARCHARCHAR-------------\n");
 	return 0;
 }
 /*

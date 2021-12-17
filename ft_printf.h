@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 19:30:50 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/16 18:31:22 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:45:44 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
 
 int	ft_printf(const char *str, ...);
 int	ft_print_char(char c);

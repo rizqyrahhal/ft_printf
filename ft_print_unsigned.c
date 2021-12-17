@@ -6,7 +6,7 @@
 /*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:45:17 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/16 13:31:26 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:22:14 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	ft_len_nb(unsigned int nb)
 
 char	*ft_writee(char *str, unsigned int nb, unsigned int len)
 {
-	if (nb == 0)
-		str[0] = '0';
 	str[len--] = '\0';
 	while (nb)
 	{
