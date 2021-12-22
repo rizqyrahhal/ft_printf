@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:45:05 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/16 18:46:54 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/22 09:51:59 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_print_new_hexa(unsigned long long num)
 		lenght_prints += ft_print_new_hexa(num / 16);
 		lenght_prints += ft_print_new_hexa(num % 16);
 	}
-	if (num >= 0 && num < 16)
+	if (num < 16)
 		lenght_prints += ft_print_char(stock[num]);
 	return (lenght_prints);
 }

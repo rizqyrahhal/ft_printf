@@ -41,6 +41,11 @@ int	main()
 	ft_printf("%x\n", 3125864);
 	ft_printf(">>%x<<\n", 16);
 	printf(">>%x<<\n", 16);
+	ft_printf("-0-0-0-0-0-0-0-0-0-0-0-0-0-0-\n");
+	ft_printf(">>%x<<\n", 0);
+	printf(">>%x<<\n", 0);
+	ft_printf("-0-0-0-0-0-0-0-0-0-0-0-0-0-0-\n");
+
 
 
 	// ft_printf("%x\n", 4500488105);

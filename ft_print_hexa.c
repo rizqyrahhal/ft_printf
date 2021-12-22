@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:44:39 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/16 18:31:11 by rarahhal         ###   ########.fr       */
+/*   Updated: 2021/12/22 09:55:23 by RizQy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_print_hexa(unsigned int num, const char format)
 		lenght_prints += ft_print_hexa(num / 16, format);
 		lenght_prints += ft_print_hexa(num % 16, format);
 	}
-	if (num >= 0 && num < 16)
+	if (num < 16)
 	{
 		if (format == 'x')
 			lenght_prints += ft_print_char(stock[num]);
