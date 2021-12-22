@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: RizQy <RizQy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rarahhal <rarahhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:45:17 by rarahhal          #+#    #+#             */
-/*   Updated: 2021/12/22 09:52:43 by RizQy            ###   ########.fr       */
+/*   Updated: 2021/12/22 17:33:39 by rarahhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	ft_print_unsigned(unsigned int nb)
 	if (nb == 0)
 	{
 		ft_print_char('0');
-		return (0);
+		return (1);
 	}
 	num = ft_utoa(nb);
 	lenght_prints = ft_print_str(num);
